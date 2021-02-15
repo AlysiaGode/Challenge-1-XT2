@@ -1,0 +1,191 @@
+/*Mobiel-first*/
+body {
+	background: radial-gradient(#210075, #000b4d);
+	color: white;
+	margin: 0px;
+}
+
+h1 {
+	text-align: center;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+li i {
+  color: lightgreen;
+  margin-right: 5px;
+}
+
+li a {
+  color: lightgrey;
+  list-style: none;
+  text-decoration: none;
+}
+
+#head {
+	background-color: red;
+	grid-area: head;
+}
+
+#systemNav {
+	background-color: blue;
+	grid-area: systemNav;
+}
+
+#rocket {
+	background-color: green;
+	grid-area: rocket;
+}
+
+#logboek {
+	background-color: yellow;
+	grid-area: logboek;
+}
+
+#dataDashboard {
+	background-color: purple;
+	grid-area: dataDashboard;
+}
+
+#dataDashboard p {
+	width: 100%;
+}
+
+#dataDashboard div {
+	/*background-color: lightblue;*/
+	width: 80%;
+	height: 200px;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#data.container {
+	margin: 0px;
+}
+
+.card {
+	margin: 0px;
+}
+
+.card svg {
+	z-index: 1000;
+	transform: rotate(180deg);
+}
+
+svg circle {
+	fill: none;
+	stroke: darkgrey;
+	stroke-width: 12px;
+	stroke-linecap: round;
+}
+
+svg circle:nth-child(2) {
+	/*500 volledige cirkel*/
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+}
+
+.card:nth-child(1) svg circle:nth-child(2)
+{
+	stroke-dashoffset: calc(500 - (250*50/*50variabele*/)/100);
+	stroke: #00ff43;
+	animation: fillCircle 1s ease;
+}
+
+@keyframes fillCircle {
+	from {
+		stroke-dashoffset: 500;
+	}
+}
+
+.number {
+	position: relative;
+	top: -37%;
+	left: 2%;
+}
+
+.number h2
+{
+	color: white;
+	font-weight: 700px;
+	font-size: 40px;
+	transition: 0.5s ease;
+}
+
+.number span {
+	font-size: 25px;
+}
+
+#connections {
+	background-color: grey;
+	grid-area: connections;
+}
+
+#connections p {
+	margin: 2px;
+}
+
+#connections span {
+	margin-bottom: 5px;
+}
+
+.line {
+	border: 1px solid black;
+	display: block;
+}
+
+#menu {
+	background-color: pink;
+	grid-area: menu;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+  .nested {
+  	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+}
+}
+
+/*Laptop*/
+@media only screen and (min-width: 1024px) {
+  #rocketPic {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+
+  .number {
+	left: 30%;
+  }
+
+  .number h2 {
+	font-weight: 700px;
+	font-size: 40px;
+  }
+
+  .number span {
+	font-size: 25px;
+  }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1920px) {
+ .number {
+	left: 10%;
+  }
+
+  .number h2 {
+	font-weight: 700px;
+	font-size: 40px;
+  }
+
+  .number span {
+	font-size: 25px;
+  }
+}

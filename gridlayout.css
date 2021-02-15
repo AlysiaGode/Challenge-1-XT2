@@ -1,0 +1,28 @@
+.grid-container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 0.7fr 1fr 0.7fr 0.7fr 0.7fr 0.5fr;
+	grid-template-areas: 
+		"head"
+		"systemNav" 
+		"rocket" 
+		"dataDashboard"
+		"logboek" 
+		"connections"
+		"menu";
+}
+
+/*Laptop*/
+@media only screen and (min-width: 1024px) {
+	.grid-container {
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+		grid-template-areas: 
+			"head head head"
+			"systemNav rocket dataDashboard"
+			"logboek rocket connections"
+			"menu menu menu";
+	}
+}
+

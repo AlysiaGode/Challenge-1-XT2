@@ -1,17 +1,99 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<title>gerrit</title>
-		<link type="text/css" href="styles/my_style.css" rel="stylesheet" />
-		<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="scripts/my_scripts.js"></script>
-	</head>
-	<body>
-		<section id="woonkamer">
-			<img id="background" src="images/background.jpg" />
-			<img id="gerrit" src="images/gerrit.png" />
-		</section>
-		<p>Spongebob Squarepants, Nickelodeon Animation Studios 1999</p>
-	</body>
+   		<meta charset="UTF-8">
+   		<!-- Zorgt dat de content zich schaalt aan de browser van het apparaat -->
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   		<title>Dashboard</title>
+   		<link rel="stylesheet" type="text/css" href="main.css">
+   		<link rel="stylesheet" type="text/css" href="gridlayout.css">
+   		<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous"></script>
+   		<!-- <script src="script.js"></script> -->
+  	</head>
+  	<body>
+  		<div class="grid-container">
+	  		<div id="head" class="grid-item">
+	  			<h1>System Overview</h1>
+	  		</div>
+			<!-- Navigatie/menu -->
+	  		<nav id="systemNav" class="grid-item">
+	  			<ul>
+				    <div class="items">
+						<li><a href="#AllSystems"><i class="far fa-check-circle"></i>All Systems</a></li>
+						<li><a href="#Cabin"><i class="far fa-check-circle"></i>Cabin</a></li>
+						<li><a href="#Power"><i class="far fa-check-circle"></i>Power</a></li>
+						<li><a href="#Fuel"><i class="far fa-check-circle"></i>Fuel</a></li>
+					</div>		
+				</ul>
+	  		</nav>
+	  		<!-- Body -->
+			<div id="rocket" class="grid-item">
+				<img id="rocketPic" src="Fotos/rocket.png" width="35%" height="100%">
+			</div>
+			<!-- Data dashboard -->
+			<div id="dataDashboard" class="grid-item nested">
+				<div id="data" class="container">
+					<div class="card">
+			            <svg height="100" width="180">
+				            <circle cx="90" cy="0" r="80"/>
+				            <circle cx="90" cy="0" r="80"/>
+			            </svg>
+			            <div class="number">
+			            	<h2>50<span>%</span></h2>
+			            </div>
+		            </div>
+		        </div>
+				<div id="data" class="container">
+					<div class="card">
+			            <svg height="100" width="180">
+				            <circle cx="90" cy="0" r="80"/>
+				            <circle cx="90" cy="0" r="80"/>
+			            </svg>
+			            <div class="number">
+			            	<h2>50<span>%</span></h2>
+			            </div>
+		            </div>
+		        </div>
+				<div id="data" class="container">
+					<div class="card">
+			            <svg height="100" width="180">
+				            <circle cx="90" cy="0" r="80"/>
+				            <circle cx="90" cy="0" r="80"/>
+			            </svg>
+			            <div class="number">
+			            	<h2>50<span>%</span></h2>
+			            </div>
+		            </div>
+		        </div>
+				<div id="data" class="container">
+					<div class="card">
+			            <svg height="100" width="180">
+				            <circle cx="90" cy="0" r="80"/>
+				            <circle cx="90" cy="0" r="80"/>
+			            </svg>
+			            <div class="number">
+			            	<h2>50<span>%</span></h2>
+			            </div>
+		            </div>
+		        </div>
+			</div>
+			<div id="logboek" class="grid-item">
+				<textarea name="log" rows="10" cols="50">
+					Hier wordt het logboek bijgehouden
+				</textarea>
+			</div>
+			<div id="connections" class="grid-item">	
+				<p>Connections</p>
+				<span class="line"></span>
+				<p>Manual Rigs: Connected</p>
+				<p>Changelog: Connected</p>
+				<p>Airlock: Connected</p>
+				<p>Wing: Connected</p>
+			</div>
+		  	<!-- Footer -->
+			<div id="menu" class="grid-item">
+				<p>Hier komt een kort menu van het dashboard</p>
+			</div>
+	  	</div>	
+  	</body>
 </html>

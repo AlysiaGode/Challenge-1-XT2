@@ -1,0 +1,150 @@
+html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+  background: url('Fotos/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#alertBox {
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	display: none;
+}
+
+#incomingBox {
+	height: 100px;
+	width: 100px;
+	background-color: green;
+	display: none;
+}
+
+#text {
+	position: absolute;
+	color: white;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+#text h1 {
+	font-size: 35px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#text h2 {
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#mars {
+	position: absolute;
+	margin-left: 50%;
+	top: 0px;
+	z-index: -1;
+	height: 200px;
+	width: 200px;
+}
+
+#rocketSVG {
+	z-index: 1;
+}
+
+.loader { 
+    width: 160px; 
+    margin: 0px auto; 
+    position: relative; 
+} 
+
+.loader .loadBar { 
+    position: relative; 
+    width: 100%; 
+    height: 10px; 
+    border: 1px solid white; 
+    border-radius: 10px; 
+    margin-top: 70px;
+} 
+  
+.loader .loadBar:before { 
+	content: ""; 
+    display: block; 
+    position: absolute; 
+    width: 0; 
+    height: 100%; 
+    background: linear-gradient(90deg, rgba(22,255,0,1) 0%, rgba(241,246,4,1) 33%, rgba(255,154,0,1) 70%, rgba(255,0,0,1) 100%);
+    animation: load 2s linear infinite; 
+} 
+
+.loadText p, .loadText span {
+	float: left;
+	color: white;
+	margin-left: 5px;
+	margin-top: -30px
+}
+
+.loaderText {
+	font-weight: 800;
+	font-size: 20px;
+}
+
+.loader {
+	font-size: 20px;
+}
+
+.eenheid {
+	font-size: 15px;
+	margin-top: -35px;
+}
+  
+@keyframes load { 
+    0% { 
+        width: 0%; 
+    } 
+  
+    100% { 
+         width: 100%; 
+    } 
+} 
+  
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+  	#text h1 {
+		font-size: 80px;
+	}
+
+	#text h2 {
+		font-size: 40px;
+	}
+}
+
+/*Laptop*/
+@media only screen and (min-width: 1024px) {
+  
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1920px) {
+	#text {
+		
+	}
+
+	#text h1 {
+		font-size: 120px;
+	}
+
+	#text h2 {
+		font-size: 80px;
+	}
+
+	#mars {
+		margin-left: 65%;
+		height: 700px;
+		width: 700px;
+	}
+}
