@@ -39,7 +39,7 @@ window.onload = function() {
 	function calcPressure() {
 		calcDataPressure = pressure - (250*pres)/100;
 		pressureData.style.strokeDashoffset = calcDataPressure;
-		pressureText.innerHTML = pres + "psi".fontsize(4);
+		pressureText.innerHTML = pres + "psia".fontsize(4);
 		if (pres >= highPressure || pres <= lowPressure) {
 			pressureData.style.stroke = "red";
 		} else {
