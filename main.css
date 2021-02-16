@@ -7,23 +7,30 @@ body {
 
 h1 {
 	text-align: center;
+	font-size: 50px;
 }
 
 li {
-  list-style: none;
-  text-decoration: none;
-  font-size: 20px;
+  	list-style: none;
+  	text-decoration: none;
+  	font-size: 30px;
 }
 
 li i {
-  color: lightgreen;
-  margin-right: 5px;
+  	color: lightgreen;
+  	margin-right: 5px;
 }
 
 li a {
-  color: lightgrey;
-  list-style: none;
-  text-decoration: none;
+  	color: white;
+ 	list-style: none;
+  	text-decoration: none;
+}
+
+.item {
+	padding-top: 20px;
+	margin-top: 20px;
+	height: 50px;
 }
 
 #head {
@@ -57,14 +64,11 @@ li a {
 
 #dataDashboard div {
 	/*background-color: lightblue;*/
-	width: 80%;
-	height: 200px;
 	margin: 0px auto;
-	margin-bottom: 10px;
 	text-align: center;
 }
 
-#data.container {
+.container {
 	margin: 0px;
 }
 
@@ -103,22 +107,25 @@ svg circle:nth-child(2) {
 	}
 }
 
-.number {
+.dataText {
 	position: relative;
-	top: -37%;
-	left: 2%;
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	font-weight: 900px;
 }
 
-.number h2
-{
+.number {
+	position: relative;
+}
+
+.number h2 {	
+	margin-bottom: 0px;
+	margin-top: -22%;
 	color: white;
 	font-weight: 700px;
 	font-size: 40px;
 	transition: 0.5s ease;
-}
-
-.number span {
-	font-size: 25px;
 }
 
 #connections {
@@ -149,7 +156,7 @@ svg circle:nth-child(2) {
   .nested {
   	display: grid;
   	grid-template-columns: repeat(2, 1fr);
-}
+  }	
 }
 
 /*Laptop*/
@@ -160,32 +167,16 @@ svg circle:nth-child(2) {
   	margin-right: auto;
   }
 
-  .number {
-	left: 30%;
-  }
-
   .number h2 {
 	font-weight: 700px;
 	font-size: 40px;
-  }
-
-  .number span {
-	font-size: 25px;
   }
 }
 
 /*Desktop*/
 @media only screen and (min-width: 1920px) {
- .number {
-	left: 10%;
-  }
-
   .number h2 {
 	font-weight: 700px;
 	font-size: 40px;
-  }
-
-  .number span {
-	font-size: 25px;
   }
 }

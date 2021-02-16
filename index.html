@@ -8,7 +8,7 @@
    		<link rel="stylesheet" type="text/css" href="main.css">
    		<link rel="stylesheet" type="text/css" href="gridlayout.css">
    		<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous"></script>
-   		<!-- <script src="script.js"></script> -->
+   		<script src="script.js"></script>
   	</head>
   	<body>
   		<div class="grid-container">
@@ -19,10 +19,10 @@
 	  		<nav id="systemNav" class="grid-item">
 	  			<ul>
 				    <div class="items">
-						<li><a href="#AllSystems"><i class="far fa-check-circle"></i>All Systems</a></li>
-						<li><a href="#Cabin"><i class="far fa-check-circle"></i>Cabin</a></li>
-						<li><a href="#Power"><i class="far fa-check-circle"></i>Power</a></li>
-						<li><a href="#Fuel"><i class="far fa-check-circle"></i>Fuel</a></li>
+						<li class="item"><a href="#AllSystems"><i class="far fa-check-circle"></i>All Systems</a></li>
+						<li class="item"><a href="#Cabin"><i class="far fa-check-circle"></i>Cabin</a></li>
+						<li class="item"><a href="#Power"><i class="far fa-check-circle"></i>Power</a></li>
+						<li class="item"><a href="#Fuel"><i class="far fa-check-circle"></i>Fuel</a></li>
 					</div>		
 				</ul>
 	  		</nav>
@@ -32,47 +32,51 @@
 			</div>
 			<!-- Data dashboard -->
 			<div id="dataDashboard" class="grid-item nested">
-				<div id="data" class="container">
+				<div id="dataPressure" class="container">
 					<div class="card">
+						<div class="dataText">Pressure</div>
 			            <svg height="100" width="180">
 				            <circle cx="90" cy="0" r="80"/>
-				            <circle cx="90" cy="0" r="80"/>
+				            <circle id="pressure" cx="90" cy="0" r="80"/>
 			            </svg>
 			            <div class="number">
-			            	<h2>50<span>%</span></h2>
+			            	<h2 id="textPressure"></h2>
 			            </div>
 		            </div>
 		        </div>
-				<div id="data" class="container">
+				<div id="dataTemp" class="container">
 					<div class="card">
+						<div class="dataText">Temperature</div>
 			            <svg height="100" width="180">
 				            <circle cx="90" cy="0" r="80"/>
-				            <circle cx="90" cy="0" r="80"/>
+				            <circle id="temp" cx="90" cy="0" r="80"/>
 			            </svg>
 			            <div class="number">
-			            	<h2>50<span>%</span></h2>
+			            	<h2 id="textTemperature"></h2>
 			            </div>
 		            </div>
 		        </div>
-				<div id="data" class="container">
+				<div id="dataO2" class="container">
 					<div class="card">
+						<div class="dataText">Oxygen</div>
 			            <svg height="100" width="180">
 				            <circle cx="90" cy="0" r="80"/>
-				            <circle cx="90" cy="0" r="80"/>
+				            <circle id="o2" cx="90" cy="0" r="80"/>
 			            </svg>
 			            <div class="number">
-			            	<h2>50<span>%</span></h2>
+			            	<h2 id="textOxygen"></h2>
 			            </div>
 		            </div>
 		        </div>
-				<div id="data" class="container">
+				<div id="dataCO2" class="container">
 					<div class="card">
+						<div class="dataText">Carbon dioxide</div>
 			            <svg height="100" width="180">
 				            <circle cx="90" cy="0" r="80"/>
-				            <circle cx="90" cy="0" r="80"/>
+				            <circle id="co2" cx="90" cy="0" r="80"/>
 			            </svg>
 			            <div class="number">
-			            	<h2>50<span>%</span></h2>
+			            	<h2 id="textCarbonDioxide"></h2>
 			            </div>
 		            </div>
 		        </div>
