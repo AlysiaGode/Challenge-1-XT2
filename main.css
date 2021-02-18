@@ -60,11 +60,17 @@ li a {
 	grid-area: rocket;
 }
 
-#rocketPic {
+model-viewer {
+	width: 400px;
+	height: 600px;
+	margin: 0px auto;
+}
+
+/*#rocketPic {
 	display: block;
 	margin-left: auto;
   	margin-right: auto;
-}
+}*/
 
 #logboek {
 	/*background-color: yellow;*/
