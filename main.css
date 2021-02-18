@@ -58,12 +58,15 @@ li a {
 #rocket {
 	/*background-color: green;*/
 	grid-area: rocket;
+	width: 400/*px;
+	height: 600px;
+	margin: 0px auto;*/
 }
 
 model-viewer {
-	width: 400px;
-	height: 600px;
-	margin: 0px auto;
+   	width: 400px;
+   	height: 600px;
+   	margin: 0px auto;
 }
 
 /*#rocketPic {
