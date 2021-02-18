@@ -8,7 +8,15 @@
    		<link rel="stylesheet" type="text/css" href="main.css">
    		<link rel="stylesheet" type="text/css" href="gridlayout.css">
    		<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous"></script>
+   		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
    		<script src="script.js"></script>
+   		<style>
+   			model-viewer {
+   				width: 400px;
+   				height: 600px;
+   				margin: 0px auto;
+   			}
+   		</style>
   	</head>
   	<body>
   		<div class="grid-container">
@@ -28,7 +36,8 @@
 	  		</nav>
 	  		<!-- Body -->
 			<div id="rocket" class="grid-item">
-				<img id="rocketPic" src="Fotos/rocket.png" width="35%" height="100%">
+				<model-viewer src="Fotos/SpaceShuttle(1).gltf" auto-rotate></model-viewer>
+				<!-- <img id="rocketPic" src="Fotos/rocket.png" width="35%" height="100%"> -->
 			</div>
 			<!-- Data dashboard -->
 			<div id="dataDashboard" class="grid-item nested">
