@@ -11,10 +11,13 @@
 
 /*Mobiel-first*/
 body {
-	background: radial-gradient(#210075, #000b4d);
+	/*background: radial-gradient(#210075, #000b4d);*/
 	color: white;
 	margin: 0px auto;
 	font-family: "SquadaOne", Verdana, sans-serif;
+	background: url('Fotos/bg.jpg');
+/*  	background-repeat: no-repeat;
+  	background-size: cover;*/
 }
 
 h1 {
