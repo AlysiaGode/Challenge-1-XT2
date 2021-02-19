@@ -343,6 +343,11 @@ svg circle:nth-child(2) {
    	width: 600px;
    	height: 750px;
 }
+	
+	.bg {
+		height: 100%;
+		width: 100%;
+	}
 
   .nested {
   	display: grid;
