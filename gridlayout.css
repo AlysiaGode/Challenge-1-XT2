@@ -8,7 +8,7 @@
 		"systemNav" 
 		"rocket" 
 		"dataDashboard"
-		"logboek" 
+		"navDashboard" 
 		"connections"
 		/*"menu"*/;
 }
@@ -16,12 +16,12 @@
 /*Laptop*/
 @media only screen and (min-width: 1440px) {
 	.grid-container {
-		grid-template-columns: 1fr 0.5fr 1fr;
-		grid-template-rows: 0.5fr 1fr 1fr /*0.5fr*/;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr 2fr /*0.5fr*/;
 		grid-template-areas: 
 			"head head head"
-			"systemNav rocket dataDashboard"
-			"logboek rocket connections"
+			"navDashboard rocket dataDashboard"
+			"systemNav rocket connections"
 			/*"menu menu menu"*/;
 	}
 }

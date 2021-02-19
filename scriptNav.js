@@ -1,19 +1,8 @@
 window.onload = function() {
-	// var rangeToMars = 1257;
-	// var totalDistanceTraveled = 11492;
 	var kmPerUur = 14;
-
 	var distanceText = document.getElementById('distanceTraveledText');
 	var rangeMarsText = document.getElementById('rangeText');
 
-	// function calcRange() {
-	// 	rangeToMars++; 
-		
-	// }
-
-	// function calcDistanceTraveled() {
-
-	// }
 	function stopSpeed() {
 		clearInterval(calcRange);
 		rangeToMars = 0;
@@ -73,22 +62,5 @@ window.onload = function() {
 			},1000); /*laat de melding 1000 ms zien/doorlopen*, melding duurt 1s totaal 5 sec dus 5x tonen*/
 		} 
 	},1000);
-
-
 }
-		// else if (rangeToMars <= 800){ /*als de raket mars nadert (afstand vanaf 800 meter)*/
-		// 	var showBoxInterval = setInterval(function() {
-		// 		if (count2 == 0) {
-		// 			count2 = 1; /*elke melding duurt 1 sec, als de seconde voorbij is reset dan de timer*/
-		// 			incoming.style.display = "block";
-		// 		} else if(endCounter2 == 0) {
-		// 			clearInterval(showBoxInterval);
-		// 			incoming.style.display = "none";
-		// 		} else {
-		// 			--count2;
-		// 			--endCounter2;
-		// 			incoming.style.display = "none";
-		// 		}
-		// 	},1000 /*laat de melding 1000 ms zien/doorlopen*, melding duurt 1s totaal 5 sec dus 5x tonen*/)
-		// }
 	
