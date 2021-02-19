@@ -152,7 +152,7 @@ window.onload = function() {
 	var totalDist = document.getElementById("distanceTraveledText");
 	var total = 11749;
 
-	var calcTotalDist = setInterval(function(){
+	var calcTotalDist = setInterval(function(){ 
 		total = total + kmPerUur ;
 		totalDist.innerHTML = total;
 	},1000);
@@ -173,4 +173,3 @@ window.onload = function() {
 
 	// drawStars();
 }
-
