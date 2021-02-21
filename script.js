@@ -103,7 +103,7 @@ window.onload = function() {
 
 	var rangeToMars = 1000;
 	var calcRange = setInterval(function(){
-		rangeToMars= rangeToMars - kmPerUur ;
+		rangeToMars = rangeToMars - kmPerUur;
 		rangeMarsText.innerHTML = rangeToMars;
 		if (rangeToMars <= 0){ /*als de raket op mars is aangekomen de afstand is 0*/
 			stopSpeed();
@@ -153,10 +153,106 @@ window.onload = function() {
 	var total = 11749;
 
 	var calcTotalDist = setInterval(function(){ 
-		total = total + kmPerUur ;
+		total = total + kmPerUur;
 		totalDist.innerHTML = total;
+		if (rangeToMars <= 0) {
+			clearInterval(calcTotalDist);
+		}
 	},1000);
 	
+	var velocityText = document.getElementById('velocityText');
+	var velocityData = document.getElementById('velocityBar');
+	var velocity = kmPerUur;
+
+	var altitudeText = document.getElementById('altitudeText');
+	var altitudeData = document.getElementById('altitudeBar');
+	var altitude = 400;
+
+	var apageeText = document.getElementById('apageeText');
+	var apageeData = document.getElementById('apageeBar');
+	var apagee = 409;
+
+	var perigeeText = document.getElementById('perigeeText');
+	var perigeeData = document.getElementById('perigeeBar');
+	var perigee = 256;
+
+	var inclinationText = document.getElementById('inclinationText');
+	var inclinationData = document.getElementById('inclinationBar');
+	var inclination = 46.1;
+
+	var rangeToMarsData = document.getElementById('rangeToMarsBar');
+
+	var totalDistanceTraveledData = document.getElementById('totalDistanceTraveledBar');
+
+	function calcVelocity() {
+		setInterval(function(){ 
+			calcDataVelocity = velocity/100/*max velocity*/*100;
+			velocityText.innerHTML = velocity;
+			velocityData.style.width = calcDataVelocity+"%";
+		},100);
+	}	
+
+	function calcAltitude() {
+		setInterval(function(){ 
+			calcDataAltitude = altitude/1000/*max altitude*/*100;
+			altitudeText.innerHTML = altitude;
+			altitudeData.style.width = calcDataAltitude+"%";
+		},100);
+	}	
+
+	function calcApagee() {
+		setInterval(function(){ 
+			calcDataApagee = apagee/1000/*max apagee*/*100;
+			apageeText.innerHTML = apagee;
+			apageeData.style.width = calcDataApagee+"%";
+		},100);
+	}	
+
+	function calcPerigee() {
+		setInterval(function(){ 
+			calcDataPerigee = perigee/1000/*max perigee*/*100;
+			perigeeText.innerHTML = perigee;
+			perigeeData.style.width = calcDataPerigee+"%";
+		},100);
+	}	
+
+	function calcInclination() {
+		setInterval(function(){ 
+			calcDataInclination = inclination/360/*max graden*/*100;
+			inclinationText.innerHTML = inclination;
+			inclinationData.style.width = calcDataInclination+"%";
+		},100);
+	}	
+
+	function calcRangeToMars() {
+		var calcMars = setInterval(function(){ 
+			calcDataRangeToMars = rangeToMars*1000/*totale afstand naar mars*//total;
+			rangeToMarsData.style.width = 100-calcDataRangeToMars+"%";
+			if (rangeToMars <= 0) {
+			clearInterval(calcMars);
+			}
+		},100);
+	}	
+
+	function calctotalDistanceTraveled() {
+		setInterval(function(){ 
+			calcDataTotalDistanceTraveled = total/12757/*totaal afgelgde km*/*100;
+			totalDistanceTraveledData.style.width = calcDataTotalDistanceTraveled+"%";
+		},1000);
+	}	
+
+	calcVelocity();
+	calcAltitude();
+	calcApagee();
+	calcPerigee();
+	calcInclination();
+	calcRangeToMars();
+	calctotalDistanceTraveled();
+
+
+
+
+
 	// function randomStars(min, max) {
 	// 	return Math.floor(Math.random() * (max-min+1)+min);
 	// }
