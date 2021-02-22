@@ -124,9 +124,17 @@ li a {
 }
 
 .item {
-	padding-top: 5px;
+	padding-top: 10px;
 	margin-top: 5px;
+	margin-bottom: 10px;
 	height: 30px;
+}
+
+#infoCabin {
+	/*display: none;*/
+	height: 165px;
+	width: 280px;
+	margin-top: 38px;
 }
 
 #head {
@@ -299,6 +307,81 @@ svg circle:nth-child(2) {
 	font-size: 20px;
 	font-weight: 900px;
 }
+
+/*-----------------------------------------------Small--------------Cabin----------------------------------------------------------------*/
+#infoCabin {
+	display: grid;
+}
+
+#cabin {
+	color: grey;
+}
+
+#infoCabin div {
+	/*background-color: lightblue;*/
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#cabinButton{
+	color: red;
+}
+.containerCabin {
+	width: 90px;
+	height: 90px;
+	margin-bottom: 20px;
+}
+
+.cardCabin {
+	padding-top: 5%;
+}
+
+.cardCabin svg {
+	z-index: 1000;
+	transform: rotate(180deg);
+}
+
+.cardCabin svg circle {
+	fill: none;
+	stroke: darkgrey;
+	stroke-width: 5px;
+	stroke-linecap: round;
+}
+
+.cardCabin svg circle:nth-child(2) {
+	/*500 volledige cirkel*/
+	stroke-dasharray: 182;
+	stroke-dashoffset: 500;
+}
+
+.cardCabin:nth-child(1) svg circle:nth-child(2) {
+	stroke: #00ff43;
+}
+
+.dataTextCabin {
+	position: relative;
+	margin-top: 5px;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: 900px;
+}
+
+.numberCabin {
+	position: relative;
+}
+
+.numberCabin h2 {	
+	margin-bottom: 0px;
+	margin-top: -21%;
+	margin-bottom: 10%;
+	color: white;
+	font-weight: 0px;
+	font-size: 17px;
+	transition: 0.5s ease;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
 
 .number {
 	position: relative;

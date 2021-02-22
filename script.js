@@ -66,6 +66,100 @@ window.onload = function() {
 	// const min = 1;
 	// const max = 4;
 	
+	var pressureTextCabin = document.getElementById('textPressureCabin');
+	var pressureDataCabin = document.getElementById('pressureCabin');
+	var pressureCabin = pressureDataCabin.getTotalLength();
+	var presCabin;
+
+	setInterval(function(){
+		presCabin = Math.floor(Math.random() * (48 - 38)) + 38;
+	},1000)
+
+	function calcPressureCabin() {
+		setInterval(function(){ 
+			calcDataPressureCabin = pressureCabin - (185*presCabin)/165;
+			pressureDataCabin.style.strokeDashoffset = calcDataPressureCabin;
+			pressureTextCabin.innerHTML = presCabin + "psia".fontsize(2);
+			if (presCabin >= highPressure || presCabin <= lowPressure) {
+				pressureDataCabin.style.stroke = "red";
+			} else {
+				pressureDataCabin.style.stroke = "#00ff43";
+			}
+		},1000);
+	}
+
+	var temperatureTextCabin = document.getElementById('textTemperatureCabin');
+	var temperatureDataCabin = document.getElementById('temperatureCabin');
+	var temperatureCabin = temperatureDataCabin.getTotalLength();
+	var temCabin;
+
+	setInterval(function(){
+		temCabin = Math.floor(Math.random() * (25 - 17)) + 17;
+	},1000)
+
+	function calcTemperatureCabin() {
+		setInterval(function(){ 
+			calcDataTemperatureCabin = temperatureCabin - (185*temCabin)/165;
+			temperatureDataCabin.style.strokeDashoffset = calcDataTemperatureCabin;
+			temperatureTextCabin.innerHTML = temCabin + "c°".fontsize(2);
+			if (temCabin >= highTemperature || temCabin <= lowTemperature) {
+				temperatureDataCabin.style.stroke = "red";
+			} else {
+				temperatureDataCabin.style.stroke = "#00ff43";
+			}
+		},1000);
+	}
+
+	var oxygenTextCabin = document.getElementById('textOxygenCabin');
+	var oxygenDataCabin = document.getElementById('oxygenCabin');
+	var oxygenCabin = oxygenDataCabin.getTotalLength();
+	var oxyCabin;
+
+	setInterval(function(){
+		oxyCabin = Math.floor(Math.random() * (37 - 23)) + 23;
+	},1000)
+
+	function calcOxygenCabin() {
+		setInterval(function(){ 
+			calcDataOxygenCabin = oxygenCabin - (185*oxyCabin)/165;
+			oxygenDataCabin.style.strokeDashoffset = calcDataOxygenCabin;
+			oxygenTextCabin.innerHTML = oxyCabin + "%".fontsize(2);
+			if (oxyCabin >= highPressure || oxyCabin <= lowOxygen) {
+				oxygenDataCabin.style.stroke = "red";
+			} else {
+				oxygenDataCabin.style.stroke = "#00ff43";
+			}
+		},1000);
+	}
+
+	var carbonTextCabin = document.getElementById('textCarbonCabin');
+	var carbonDataCabin = document.getElementById('carbonCabin');
+	var carbonCabin = carbonDataCabin.getTotalLength();
+	var carboCabin;
+
+	setInterval(function(){
+		carboCabin = Math.floor(Math.random() * (5 - 1)) + 1;
+	},1000)
+
+	function calcCarbonCabin() {
+		setInterval(function(){ 
+			calcDataCarbonCabin = carbonCabin - (185*carboCabin)/165;
+			carbonDataCabin.style.strokeDashoffset = calcDataCarbonCabin;
+			carbonTextCabin.innerHTML = carboCabin + "%".fontsize(2);
+			if (carboCabin >= highCarbonDioxide) {
+				carbonDataCabin.style.stroke = "red";
+			} else {
+				carbonDataCabin.style.stroke = "#00ff43";
+			}
+		},1000);
+	}
+
+	calcPressureCabin();
+	calcCarbonCabin();
+	calcOxygenCabin();
+	calcTemperatureCabin();
+
+
 	function calcPressure() {
 		setInterval(function(){ 
 			calcDataPressure = pressure - (250*pres)/100;
@@ -296,7 +390,18 @@ window.onload = function() {
 	calctotalDistanceTraveled();
 
 
-
+	var cabinStats = document.getElementById("infoCabin");
+	var cabinButton = document.getElementById("cabin")
+	cabinButton.onclick = function(){
+		if (cabinStats.style.display == "grid") {
+			cabinStats.style.display = "none";
+			cabinButton.style.color = "white";
+		} else {
+			cabinStats.style.display = "grid";
+			cabinButton.style.color = "grey";
+		}
+		
+	}
 
 
 	// var stars = document.getElementById('stars');

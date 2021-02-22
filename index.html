@@ -22,20 +22,69 @@
 	  			<h1>System Overview</h1>
 	  		</div>
 			<!-- Navigatie/menu -->
-	  		<nav id="systemNav" class="grid-item">
+	  		<nav id="systemNav" class="grid-item nested">
 	  			<ul>
 				    <div class="items">
-						<li class="item"><a href="#AllSystems"><i class="far fa-check-circle"></i>All Systems</a></li>
-						<li class="item"><a href="#Cabin"><i class="far fa-check-circle"></i>Cabin</a></li>
-						<li class="item"><a href="#Power"><i class="far fa-check-circle"></i>Power</a></li>
-						<li class="item"><a href="#Fuel"><i class="far fa-check-circle"></i>Fuel</a></li>
+						<li class="item"><a id="allSystems" href="#AllSystems"><i class="far fa-check-circle"></i>All Systems</a></li>
+						<li class="item"><a id="cabin" href="#Cabin"><i class="far fa-check-circle"></i>Cabin</a></li>
+						<li class="item"><a id="power" href="#Power"><i class="far fa-check-circle"></i>Power</a></li>
+						<li class="item"><a id="fuel" href="#Fuel"><i class="far fa-check-circle"></i>Fuel</a></li>
 					</div>		
 				</ul>
+				<div id="infoCabin" class="nested">
+					<div id="dataPressureCabin" class="containerCabin styleContainer">
+						<div class="cardCabin">
+							<div class="dataTextCabin">Pressure</div>
+				            <svg height="43" width="80"> 
+					            <circle cx="40" cy="0" r="30"/>
+					            <circle id="pressureCabin" cx="40" cy="0" r="30"/>
+				            </svg>
+				            <div class="numberCabin">
+				            	<h2 id="textPressureCabin"></h2>
+				            </div>
+			            </div>
+					</div>
+					<div id="dataTemperatureCabin" class="containerCabin styleContainer">
+						<div class="cardCabin">
+							<div class="dataTextCabin">Temperature</div>
+				            <svg height="43" width="80"> 
+					            <circle cx="40" cy="0" r="30"/>
+					            <circle id="temperatureCabin" cx="40" cy="0" r="30"/>
+				            </svg>
+				            <div class="numberCabin">
+				            	<h2 id="textTemperatureCabin"></h2>
+				            </div>
+			            </div>
+					</div>
+					<div id="dataOxygenCabin" class="containerCabin styleContainer">
+						<div class="cardCabin">
+							<div class="dataTextCabin">O2</div>
+				            <svg height="43" width="80"> 
+					            <circle cx="40" cy="0" r="30"/>
+					            <circle id="oxygenCabin" cx="40" cy="0" r="30"/>
+				            </svg>
+				            <div class="numberCabin">
+				            	<h2 id="textOxygenCabin"></h2>
+				            </div>
+			            </div>
+					</div>
+					<div id="dataCarbonCabin" class="containerCabin styleContainer">
+						<div class="cardCabin">
+							<div class="dataTextCabin">Co2</div>
+				            <svg height="43" width="80"> 
+					            <circle cx="40" cy="0" r="30"/>
+					            <circle id="carbonCabin" cx="40" cy="0" r="30"/>
+				            </svg>
+				            <div class="numberCabin">
+				            	<h2 id="textCarbonCabin"></h2>
+				            </div>
+			            </div>
+					</div>
+				</div>
 	  		</nav>
 	  		<!-- Body -->
 			<div id="rocket" class="grid-item">
 				<model-viewer id="spaceShip" src="Fotos/SpaceShuttle(1).gltf" auto-rotate></model-viewer>
-				<!-- <img id="rocketPic" src="Fotos/rocket.png" width="35%" height="100%"> -->
 			</div>
 			<!-- Data dashboard -->
 			<div id="dataDashboard" class="grid-item nested">
@@ -175,10 +224,6 @@
 				<p class="nested">Airlock: <span class="small">Connected</span></p>
 				<p class="nested">Wing: <span class="small">Connected</span></p>
 			</div>
-		  	<!-- Footer -->
-			<!-- <div id="menu" class="grid-item">
-				<p>Hier komt een kort menu van het dashboard</p>
-			</div> -->
 	  	</div>	
   	</body>
 </html>
