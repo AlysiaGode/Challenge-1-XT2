@@ -23,6 +23,7 @@ body {
 	height: 265%;
 	overflow: hidden;
 	position: absolute;
+	z-index: -1;
 } 
 
 #stars {
@@ -98,6 +99,11 @@ body {
 h1 {
 	text-align: center;
 	font-size: 60px;
+	margin: 10px;
+}
+
+ul {
+	margin-top: 0px;
 }
 
 li {
@@ -313,6 +319,7 @@ svg circle:nth-child(2) {
 	grid-area: connections;
 	padding-left: 10%;
 	margin-top: 20px;
+	padding-bottom: 15px;
 }
 
 #connections p:nth-child(1) {
@@ -352,6 +359,25 @@ svg circle:nth-child(2) {
 	grid-area: menu;
 }
 
+@media only screen and (min-width: 375px) {
+	#connections {
+		margin-left: 6%;
+	}
+
+	ul {
+		margin-left: 5%;
+	}
+}
+
+@media only screen and (min-width: 425px) {
+	#connections {
+		margin-left: 2.5%;
+	}
+
+	ul {
+		margin-left: 12%;
+	}
+}
 
 /*Tablet*/
 @media only screen and (min-width: 768px) {
@@ -363,6 +389,8 @@ svg circle:nth-child(2) {
   .bg {
 	height: 100%;
 	width: 100%;
+/*	z-index: -1;
+	position: static;*/
   }
 
   .nested {
@@ -376,89 +404,94 @@ svg circle:nth-child(2) {
   }
 
   .line {
-	width: 434px;
+	width: 442px;
  }
+
+ #connections {
+ 	padding-left: 5%;
+ }
+
+ ul {
+ 	margin-left: 68px;
+ 	padding-left: 0px;
+ }
+
 }
 
 /*Laptop*/
 @media only screen and (min-width: 1024px) {
-/*  .number h2 {
-	font-weight: 700px;
-	font-size: 40px;
+  ul {
+  	padding-left: 60px;
   }
 
-  #dataDashboard {
-  	padding-right: 20%;
-  }
-
-  .item {
-	padding-top: 20px;
-	margin-top: 20px;
-	height: 50px;
-  }
-
-  .dataText {
-	margin-top: 0px;
-}
-
-  .number h2 {	
-	margin-top: -22%;
-	margin-bottom: 0%;
+  #navDashboard{
+  	width: 760px;
+  	height: 510px;
   }
 
   #connections {
-	padding-left: 0%;
-	margin-top: 0px;
+	padding-left: 10%;
   }
 
-  #logboek {
-	text-align: left;
-  }*/
-
   .line {
-	width: 60%;
+	width: 535px;
  }
 }
 
 /*Desktop*/
 @media only screen and (min-width: 1920px) {
-body {
+  body {
 	overflow: hidden;
-}
-
-#stars:after {
-  top: 2000px;
-  width: 0.5px;
-  height: 0.5px;
- }
-
-#stars2 {
-  width: 1px;
-  height: 1px;
-}
-
-#stars2:after {
-  top: 2000px;
-  width: 0.8px;
-  height: 0.8px;
- }
-
-#stars3 {
-  width: 2px;
-  height: 2px;
-}
-
-#stars3:after {
-  top: 2000px;
- }
-
-  .number h2 {
-	font-weight: 700px;
-	font-size: 40px;
   }
 
+  #stars:after {
+  	top: 2000px;
+  	width: 0.5px;
+  	height: 0.5px;
+  }
+
+  #stars2 {
+ 	width: 1px;
+  	height: 1px;
+  }
+
+  #stars2:after {
+  	top: 2000px;
+  	width: 0.8px;
+  	height: 0.8px;
+ }
+
+ #stars3 {
+  	width: 2px;
+  	height: 2px;
+ }
+
+ #stars3:after {
+  	top: 2000px;
+ }
+
+ ul {
+  	padding-left: 0px;
+  	margin-left: 40px;
+  	margin-top: 30px;
+ }
+
+ .loader {
+ 	margin-top: 60px;
+ }
+
+ #navDashboard {
+  	width: 560px;
+  	height: 420px;
+  	margin-top: 20px;
+ }
+
+ #connections {
+	padding-left: 15px;
+ }
+
  .line {
-	width: 62.8%;
+	width: 390px;
  }
 
 }
