@@ -438,10 +438,23 @@ svg circle:nth-child(2) {
  }
 }
 
-/*Desktop*/
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1440px) {
+  model-viewer {
+   	width: 500px;
+   	height: 750px;
+  }
+
   body {
 	overflow: hidden;
+  }
+
+  .container {
+	width: 220px;
+	height: 180px;
+  }
+
+  .card {
+  	padding: 0px;
   }
 
   #stars:after {
@@ -479,6 +492,36 @@ svg circle:nth-child(2) {
  .loader {
  	margin-top: 60px;
  }
+
+ #navDashboard {
+  	width: 400px;
+  	height: 370px;
+  	margin-top: 20px;
+  	padding-bottom: 10px;
+ }
+
+ #connections {
+	padding-left: 15px;
+ }
+
+ .line {
+	width: 310px;
+ }
+
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1920px) {
+ model-viewer {
+   	width: 600px;
+   	height: 750px;
+ }
+
+ .container {
+	width: 250px;
+	height: 200px;
+	margin-bottom: 20px;
+}
 
  #navDashboard {
   	width: 560px;
