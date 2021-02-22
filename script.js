@@ -2,82 +2,120 @@ window.onload = function() {
 	var pressureText = document.getElementById('textPressure');
 	var pressureData = document.getElementById('pressure');
 	var pressure = pressureData.getTotalLength();
-	var pres = 60;
+	var pres;
+
+	setInterval(function(){
+		pres = Math.floor(Math.random() * (48 - 38)) + 38;
+	},1000)
 
 	var temperatureText = document.getElementById('textTemperature');
 	var temperatureData = document.getElementById('temp');
 	var temperature = pressureData.getTotalLength();
-	var tem = 44.7;
+	var tem;
+
+	setInterval(function(){
+		tem1 = Math.floor(Math.random() * (25 - 17)) + 17;
+		tem = tem1.toFixed(1);
+	},1000)
 
 	var oxygenText = document.getElementById('textOxygen');
 	var oxygenData = document.getElementById('o2');
 	var oxygen = oxygenData.getTotalLength();
-	var oxy = 24.2;
+	var oxy;
 	
+	setInterval(function(){
+		oxy = Math.floor(Math.random() * (37 - 23)) + 23;
+	},1000)
+
 	var carbonDioxideText = document.getElementById('textCarbonDioxide');
 	var carbonDioxideData = document.getElementById('co2');
 	var carbonDioxide = carbonDioxideData.getTotalLength();
-	var carbo = 0.4;
+	var carbo;
+
+	setInterval(function(){
+		carbo1 = Math.floor(Math.random() * (5 - 1)) + 1;
+		carbo = carbo1.toFixed(1);
+	},1000)
 
 	//danger red
 	const highPressure = 80;
 	const highTemperature = 37; 
-	const highCarbonDioxide = 10; 
+	const highCarbonDioxide = 3; 
 
 	//normal green
 	const medPressure = 60;
 	const medTemperature = 24; 
 	const medOxygen = 34;
-	const medCarbonDioxide = 2; 
+	const medCarbonDioxide = 1; 
 
 	//danger red
 	const lowPressure = 40;
 	const lowTemperature = 18; 
-	const lowOxygen = 10;
+	const lowOxygen = 25;
 
+	// function randomNumberPressure(min, max) {
+	// 	return Math.floor(Math.random() * (max-min+1)+min);
+	// }
 
+	// var pres = setInterval(function(){
+	// 	randomNumberPressure(60, 63);
+	// },1000);
+
+	
+	
+	// const min = 1;
+	// const max = 4;
+	
 	function calcPressure() {
-		calcDataPressure = pressure - (250*pres)/100;
-		pressureData.style.strokeDashoffset = calcDataPressure;
-		pressureText.innerHTML = pres + "psia".fontsize(4);
-		if (pres >= highPressure || pres <= lowPressure) {
-			pressureData.style.stroke = "red";
-		} else {
-			pressureData.style.stroke = "#00ff43";
-		}
+		setInterval(function(){ 
+			calcDataPressure = pressure - (250*pres)/100;
+			pressureData.style.strokeDashoffset = calcDataPressure;
+			pressureText.innerHTML = pres + "psia".fontsize(4);
+			if (pres >= highPressure || pres <= lowPressure) {
+				pressureData.style.stroke = "red";
+			} else {
+				pressureData.style.stroke = "#00ff43";
+			}
+		},1000);
 	}
 
 	function calcTemperature() {
-		calcDataTemperature = temperature - (250*tem)/100;
-		temperatureData.style.strokeDashoffset = calcDataTemperature;
-		temperatureText.innerHTML = tem + "c°".fontsize(4);
-		if (tem >= highTemperature || tem <= lowTemperature) {
-			temperatureData.style.stroke = "red";
-		} else {
-			temperatureData.style.stroke = "#00ff43";
-		}
+		setInterval(function(){ 
+			calcDataTemperature = temperature - (250*tem)/100;
+			temperatureData.style.strokeDashoffset = calcDataTemperature;
+			temperatureText.innerHTML = tem + "c°".fontsize(4);
+			if (tem >= highTemperature || tem <= lowTemperature) {
+				temperatureData.style.stroke = "red";
+			} else {
+				temperatureData.style.stroke = "#00ff43";
+			}
+		},1000);
 	}
 
 	function calcOxygen() {
-		calcDataOxygen = oxygen - (250*oxy)/100;
-		oxygenData.style.strokeDashoffset = calcDataOxygen;
-		oxygenText.innerHTML = oxy + "%".fontsize(4);
-		if (oxy <= lowOxygen) {
-			oxygenData.style.stroke = "red";
-		} else {
-			oxygenData.style.stroke = "#00ff43";
-		}
+		setInterval(function(){ 	
+			calcDataOxygen = oxygen - (250*oxy)/100;
+			oxygenData.style.strokeDashoffset = calcDataOxygen;
+			oxygenText.innerHTML = oxy + "%".fontsize(4);
+			if (oxy <= lowOxygen) {
+				oxygenData.style.stroke = "red";
+			} else {
+				oxygenData.style.stroke = "#00ff43";
+			}
+		},1000);	
 	}
 
 	function calcCarbonDioxide() {
-		calcDataCarbonDioxide = carbonDioxide - (250*carbo)/100;
-		carbonDioxideData.style.strokeDashoffset = calcDataCarbonDioxide;
-		carbonDioxideText.innerHTML = carbo + "%".fontsize(4);
-		if (carbo >= highCarbonDioxide) {
-			carbonDiosxideData.style.stroke = "red";
-		} else {
-			carbonDioxideData.style.stroke = "#00ff43";
-		}
+		setInterval(function(){ 	
+			calcDataCarbonDioxide = carbonDioxide - (250*carbo)/100;
+			carbonDioxideData.style.strokeDashoffset = calcDataCarbonDioxide;
+			carbonDioxideText.innerHTML = carbo + "%".fontsize(4);
+			if (carbo >= highCarbonDioxide) {
+				carbonDioxideData.style.stroke = "red";
+			} else {
+				carbonDioxideData.style.stroke = "#00ff43";
+			}
+		},1000);	
 	}
 
 	calcPressure();
@@ -85,7 +123,11 @@ window.onload = function() {
 	calcOxygen();
 	calcCarbonDioxide();
 
-	var kmPerUur = 14;
+	var kmPerUur;
+	calcKMU = setInterval(function(){
+		kmPerUur = Math.floor(Math.random() * (18 - 14)) + 14;
+	},1000)
+
 	var distanceText = document.getElementById('distanceTraveledText');
 	var rangeMarsText = document.getElementById('rangeText');
 
@@ -162,7 +204,6 @@ window.onload = function() {
 	
 	var velocityText = document.getElementById('velocityText');
 	var velocityData = document.getElementById('velocityBar');
-	var velocity = kmPerUur;
 
 	var altitudeText = document.getElementById('altitudeText');
 	var altitudeData = document.getElementById('altitudeBar');
@@ -185,10 +226,15 @@ window.onload = function() {
 	var totalDistanceTraveledData = document.getElementById('totalDistanceTraveledBar');
 
 	function calcVelocity() {
-		setInterval(function(){ 
-			calcDataVelocity = velocity/100/*max velocity*/*100;
-			velocityText.innerHTML = velocity;
+		velocityInt = setInterval(function(){ 
+			calcDataVelocity = kmPerUur/100/*max velocity*/*100;
+			velocityText.innerHTML = kmPerUur;
 			velocityData.style.width = calcDataVelocity+"%";
+			if (rangeToMars <= 0) {
+				clearInterval(velocityInt);
+				clearInterval(calcKMU);
+				kmPerUur = 0;
+			}
 		},100);
 	}	
 
@@ -229,7 +275,7 @@ window.onload = function() {
 			calcDataRangeToMars = rangeToMars*1000/*totale afstand naar mars*//total;
 			rangeToMarsData.style.width = 100-calcDataRangeToMars+"%";
 			if (rangeToMars <= 0) {
-			clearInterval(calcMars);
+				clearInterval(calcMars);
 			}
 		},100);
 	}	
@@ -252,10 +298,6 @@ window.onload = function() {
 
 
 
-
-	// function randomStars(min, max) {
-	// 	return Math.floor(Math.random() * (max-min+1)+min);
-	// }
 
 	// var stars = document.getElementById('stars');
 	// var stars2 = document.getElementById('stars2');

@@ -281,16 +281,16 @@ svg circle:nth-child(2) {
 
 .card:nth-child(1) svg circle:nth-child(2)
 {
-	stroke-dashoffset: calc(500 - (250*50/*50variabele*/)/100);
+	/*stroke-dashoffset: calc(500 - (250*50)/100);*/
 	stroke: #00ff43;
-	animation: fillCircle 1s ease;
+	/*animation: fillCircle 1s ease;*/
 }
 
-@keyframes fillCircle {
+/*@keyframes fillCircle {
 	from {
 		stroke-dashoffset: 500;
 	}
-}
+}*/
 
 .dataText {
 	position: relative;
