@@ -325,9 +325,9 @@ window.onload = function() {
 			velocityText.innerHTML = kmPerUur;
 			velocityData.style.width = calcDataVelocity+"%";
 			if (rangeToMars <= 0) {
-				clearInterval(velocityInt);
 				clearInterval(calcKMU);
 				kmPerUur = 0;
+				clearInterval(velocityInt);
 			}
 		},100);
 	}	
@@ -392,17 +392,121 @@ window.onload = function() {
 
 	var cabinStats = document.getElementById("infoCabin");
 	var cabinButton = document.getElementById("cabin")
+	cabinStats.style.display = "none";
 	cabinButton.onclick = function(){
 		if (cabinStats.style.display == "grid") {
 			cabinStats.style.display = "none";
 			cabinButton.style.color = "white";
+		} else if (allSystemsStats.style.display == "block" || fuelStats.style.display == "block") {
+			cabinStats.style.display = "grid";
+			allSystemsStats.style.display = "none";
+			fuelStats.style.display = "none";
+			cabinButton.style.color = "grey";
+			allSystemsButton.style.color = "white";
+			fuelButton.style.color = "white";
 		} else {
 			cabinStats.style.display = "grid";
 			cabinButton.style.color = "grey";
 		}
-		
 	}
 
+	var allSystemsStats = document.getElementById("infoAllSystems");
+	var allSystemsButton = document.getElementById("allSystems")
+	allSystemsButton.onclick = function(){
+		if (allSystemsStats.style.display == "block") {
+			allSystemsStats.style.display = "none";
+			allSystemsButton.style.color = "white";
+		} else if (cabinStats.style.display == "grid" || fuelStats.style.display == "block") {
+			allSystemsStats.style.display = "block";
+			cabinStats.style.display = "none";
+			fuelStats.style.display = "none";
+			allSystemsButton.style.color = "grey";
+			fuelButton.style.color = "white";
+			cabinButton.style.color = "white";
+		} else { 
+			allSystemsStats.style.display = "block";
+			allSystemsButton.style.color = "grey"; 
+		}
+	}
+
+	var rocketL = document.getElementById("rocketL");
+	var rocketR = document.getElementById("rocketR");
+	var dataRocketL;
+	var dataRocketR;
+
+	var caretUL = document.getElementById("caretUL");
+	var caretUR = document.getElementById("caretUR");
+
+	var caretL = document.getElementById("caretL");
+	var caretR = document.getElementById("caretR");
+
+	setInterval(function(){
+		dataRocketL = Math.floor(Math.random() * (60 - 24)) + 24;
+	},1000)
+
+	setInterval(function(){
+		dataRocketR = Math.floor(Math.random() * (60 - 24)) + 24;
+	},1000)
+
+	var dataR;
+	var dataL;
+
+	setInterval(function(){
+		dataL = dataRocketL;
+	},1010)
+
+	setInterval(function(){
+		dataR = dataRocketL;
+	},1010)
+
+	function calcFuel() {
+		setInterval(function(){
+			if (dataRocketR < dataR) {
+				caretR.style.display = "block";
+				caretUR.style.display = "none";
+			} else if (dataRocketR > dataR) {
+				caretUR.style.display = "block";
+				caretR.style.display = "none";
+			} else {
+				caretUR.style.display = "none";
+				caretR.style.display = "none";
+			}
+
+			if (dataRocketL < dataL) {
+				caretL.style.display = "block";
+				caretUL.style.display = "none";
+			} else if (dataRocketL > dataL) {
+				caretUL.style.display = "block";
+				caretL.style.display = "none";
+			} else {
+				caretUL.style.display = "none";
+				caretL.style.display = "none";
+			}
+			rocketR.innerHTML = dataRocketR + "%";
+			rocketL.innerHTML = dataRocketL + "%";
+		},1000)
+	}
+
+	calcFuel();
+
+	var fuelStats = document.getElementById("infoFuel");
+	var fuelButton = document.getElementById("fuel")
+	fuelButton.onclick = function(){
+		if (fuelStats.style.display == "block") {
+			fuelStats.style.display = "none";
+			fuelButton.style.color = "white";
+		} else if (allSystemsStats.style.display == "block" || cabinStats.style.display == "grid") {
+			fuelStats.style.display = "block";
+			allSystemsStats.style.display = "none"; 
+			cabinStats.style.display = "none";
+			fuelButton.style.color = "grey";
+			allSystemsButton.style.color = "white";
+			cabinButton.style.color = "white";
+		} else {
+			fuelStats.style.display = "block";
+			fuelButton.style.color = "grey";
+		}
+	}
 
 	// var stars = document.getElementById('stars');
 	// var stars2 = document.getElementById('stars2');

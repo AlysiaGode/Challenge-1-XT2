@@ -313,10 +313,6 @@ svg circle:nth-child(2) {
 	display: grid;
 }
 
-#cabin {
-	color: grey;
-}
-
 #infoCabin div {
 	/*background-color: lightblue;*/
 	margin-left: auto;
@@ -364,7 +360,7 @@ svg circle:nth-child(2) {
 	margin-top: 5px;
 	padding: 0px;
 	font-size: 16px;
-	font-weight: 900px;
+	font-weight: 100;
 }
 
 .numberCabin {
@@ -380,9 +376,148 @@ svg circle:nth-child(2) {
 	font-size: 17px;
 	transition: 0.5s ease;
 }
-/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.nested2 {
+  	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  }	
+/*-----------------------------------Small------------------------------All Systems---------------------------------------------------------------------------*/
+#infoAllSystems {
+	height: 170px;
+	width: 250px;
+	margin-top: 50px;
+	margin-left: 30px;
+	display: none;
+}
+
+.lineSmall {
+	width: 165px;
+	border: 1px solid white;
+	display: block;
+	margin-bottom: -2px;
+	margin-left: 10px;
+}
+
+#allSystemsText {
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+#allSystemsText p {
+	margin: 10px;
+	font-size: 18px;
+	font-family: "Marmelad", Verdana, sans-serif;
+	font-weight: 100;
+}
+
+.status {
+	color: #00ff43;
+}
+
+.infoHead, #allSystemsText p:nth-child(1) {
+	font-weight: 900;
+	font-size: 20px;
+}
+
+#allSystemsText span {
+	font-weight: 900;
+}
+/*----------------------------------------Small------------------------------Power-----------------------------------------------------------------------------*/
 
 
+
+
+
+/*-----------------------------------------Small-------------------------------Fuel---------------------------------------------------------------------------------------*/
+
+#infoFuel {
+	height: 200px;
+	width: 280px;
+	margin-top: 35px;
+	margin-left: 0px;
+	display: none;
+}
+
+#infoFuelData {
+	text-align: center;
+	margin-top: 18px;
+}
+
+.fuelImg img {
+	width: 25px;
+	height: 170px;
+}
+
+.nested1 {
+	display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+}
+
+.fuelData p {
+	font-size: 25px;
+	margin-top: 70px;
+}
+
+#infoFuelData div:nth-child(2) {
+	margin-right: 35px;
+}
+
+#infoFuelData div:nth-child(3) {
+	margin-left: 35px;
+}
+
+#infoFuelData div:nth-child(1) {
+	margin-left: 5px;
+}
+
+#infoFuelData div:nth-child(4) {
+	margin-right: 5px;
+}
+
+#infoFuelText {
+	position: absolute;
+	margin-left: 78px;
+	font-size: 20px;
+}
+
+#rightR {
+	margin-left: 52px;
+}
+
+#infoFuelCaretsDown i {
+	position: absolute;
+	margin-top: 122px;
+	color: red;
+	display: none;
+}
+
+#infoFuelCaretsDown i:nth-child(1) {
+	margin-left: 75px;
+}
+
+#infoFuelCaretsDown i:nth-child(2) {
+	margin-left: 190px;
+}
+
+#infoFuelCaretsUp i {
+	position: absolute;
+	margin-top: 68px;
+	color: #00ff43;
+	display: none;
+}
+
+#infoFuelCaretsUp i:nth-child(1) {
+	margin-left: 75px;
+}
+
+#infoFuelCaretsUp i:nth-child(2) {
+	margin-left: 190px;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .number {
 	position: relative;
 }
