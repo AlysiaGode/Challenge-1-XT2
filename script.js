@@ -392,7 +392,8 @@ window.onload = function() {
 
 	var cabinStats = document.getElementById("infoCabin");
 	var cabinButton = document.getElementById("cabin")
-	cabinStats.style.display = "none";
+	cabinStats.style.display = "grid";
+	cabinButton.style.color = "grey";
 	cabinButton.onclick = function(){
 		if (cabinStats.style.display == "grid") {
 			cabinStats.style.display = "none";
