@@ -391,9 +391,8 @@ window.onload = function() {
 
 
 	var cabinStats = document.getElementById("infoCabin");
-	var cabinButton = document.getElementById("cabin")
-	cabinStats.style.display = "grid";
-	cabinButton.style.color = "grey";
+	var cabinButton = document.getElementById("cabin");
+	cabinStats.style.display = "none";
 	cabinButton.onclick = function(){
 		if (cabinStats.style.display == "grid") {
 			cabinStats.style.display = "none";
@@ -413,6 +412,8 @@ window.onload = function() {
 
 	var allSystemsStats = document.getElementById("infoAllSystems");
 	var allSystemsButton = document.getElementById("allSystems")
+	allSystemsStats.style.display = "block";
+	allSystemsButton.style.color = "grey";
 	allSystemsButton.onclick = function(){
 		if (allSystemsStats.style.display == "block") {
 			allSystemsStats.style.display = "none";
