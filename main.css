@@ -423,7 +423,50 @@ svg circle:nth-child(2) {
 	font-weight: 900;
 }
 /*----------------------------------------Small------------------------------Power-----------------------------------------------------------------------------*/
+#infoPower {
+	height: 230px;
+	width: 280px;
+	margin-top: 20px;
+	margin-left: 0px;
+	display: none;
+}
 
+.lineSmallPower {
+	width: 195px;
+	border: 1px solid white;
+	display: block;
+	margin-bottom: -2px;
+	margin-left: 10px;
+}
+
+#powerText {
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+#powerText p {
+	margin: 10px;
+	font-size: 18px;
+	font-family: "Marmelad", Verdana, sans-serif;
+	font-weight: 100;
+}
+
+.statusPower {
+	color: #00ff43;
+}
+
+.powerHead, #powerText p:nth-child(1) {
+	font-weight: 900;
+	font-size: 20px;
+}
+
+#powerText span {
+	font-weight: 900;
+}
+
+#statusHead, .statusPower { 
+	padding-left: 20px;
+}
 
 
 

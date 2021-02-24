@@ -218,7 +218,7 @@ window.onload = function() {
 	calcCarbonDioxide();
 
 	var kmPerUur;
-	calcKMU = setInterval(function(){
+	var calcKMU = setInterval(function(){
 		kmPerUur = Math.floor(Math.random() * (18 - 14)) + 14;
 	},1000)
 
@@ -320,14 +320,13 @@ window.onload = function() {
 	var totalDistanceTraveledData = document.getElementById('totalDistanceTraveledBar');
 
 	function calcVelocity() {
-		velocityInt = setInterval(function(){ 
+		var velocityInt = setInterval(function(){ 
 			calcDataVelocity = kmPerUur/100/*max velocity*/*100;
 			velocityText.innerHTML = kmPerUur;
 			velocityData.style.width = calcDataVelocity+"%";
 			if (rangeToMars <= 0) {
 				clearInterval(calcKMU);
 				kmPerUur = 0;
-				clearInterval(velocityInt);
 			}
 		},100);
 	}	
@@ -397,7 +396,7 @@ window.onload = function() {
 		if (cabinStats.style.display == "grid") {
 			cabinStats.style.display = "none";
 			cabinButton.style.color = "white";
-		} else if (allSystemsStats.style.display == "block" || fuelStats.style.display == "block") {
+		} else if (allSystemsStats.style.display == "block" || fuelStats.style.display == "block" || powerStats.style.display == "block") {
 			cabinStats.style.display = "grid";
 			allSystemsStats.style.display = "none";
 			fuelStats.style.display = "none";
@@ -407,6 +406,9 @@ window.onload = function() {
 			fuelButton.style.color = "white";
 			allSystemsButton.style.textShadow = "none";
 			fuelButton.style.textShadow = "none";
+			powerButton.style.color = "white";
+			powerButton.style.textShadow = "none";
+			powerStats.style.display = "none";
 		} else {
 			cabinStats.style.display = "grid";
 			cabinButton.style.color = "#18399a";
@@ -423,7 +425,7 @@ window.onload = function() {
 		if (allSystemsStats.style.display == "block") {
 			allSystemsStats.style.display = "none";
 			allSystemsButton.style.color = "white";
-		} else if (cabinStats.style.display == "grid" || fuelStats.style.display == "block") {
+		} else if (cabinStats.style.display == "grid" || fuelStats.style.display == "block" || powerStats.style.display == "block") {
 			allSystemsStats.style.display = "block";
 			cabinStats.style.display = "none";
 			fuelStats.style.display = "none";
@@ -433,6 +435,9 @@ window.onload = function() {
 			cabinButton.style.color = "white";
 			cabinButton.style.textShadow = "none";
 			fuelButton.style.textShadow = "none";
+			powerButton.style.color = "white";
+			powerButton.style.textShadow = "none";
+			powerStats.style.display = "none";
 		} else { 
 			allSystemsStats.style.display = "block";
 			allSystemsButton.style.color = "#18399a";
@@ -506,7 +511,7 @@ window.onload = function() {
 		if (fuelStats.style.display == "block") {
 			fuelStats.style.display = "none";
 			fuelButton.style.color = "white";
-		} else if (allSystemsStats.style.display == "block" || cabinStats.style.display == "grid") {
+		} else if (allSystemsStats.style.display == "block" || cabinStats.style.display == "grid" || powerStats.style.display == "block") {
 			fuelStats.style.display = "block";
 			allSystemsStats.style.display = "none"; 
 			cabinStats.style.display = "none";
@@ -516,10 +521,39 @@ window.onload = function() {
 			cabinButton.style.color = "white";
 			cabinButton.style.textShadow = "none";
 			allSystemsButton.style.textShadow = "none";
+			powerButton.style.color = "white";
+			powerButton.style.textShadow = "none";
+			powerStats.style.display = "none";
 		} else {
 			fuelStats.style.display = "block";
 			fuelButton.style.color = "#18399a";
 			fuelButton.style.textShadow = "0px 2px 7px #030816";
+		}
+	}
+
+	var powerStats = document.getElementById("infoPower");
+	var powerButton = document.getElementById("power")
+	powerButton.onclick = function(){
+		if (powerStats.style.display == "block") {
+			powerStats.style.display = "none";
+			powerButton.style.color = "white";
+		} else if (allSystemsStats.style.display == "block" || cabinStats.style.display == "grid" || fuelStats.style.display == "block") {
+			powerStats.style.display = "block";
+			allSystemsStats.style.display = "none"; 
+			cabinStats.style.display = "none";
+			powerButton.style.color = "#18399a";
+			powerButton.style.textShadow = "0px 2px 7px #030816";
+			allSystemsButton.style.color = "white";
+			cabinButton.style.color = "white";
+			cabinButton.style.textShadow = "none";
+			allSystemsButton.style.textShadow = "none";
+			fuelButton.style.color = "white";
+			fuelButton.style.textShadow = "none";
+			fuelStats.style.display = "none";
+		} else {
+			powerStats.style.display = "block";
+			powerButton.style.color = "#18399a";
+			powerButton.style.textShadow = "0px 2px 7px #030816";
 		}
 	}
 
