@@ -311,6 +311,9 @@ svg circle:nth-child(2) {
 /*-----------------------------------------------Small--------------Cabin----------------------------------------------------------------*/
 #infoCabin {
 	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
 }
 
 #infoCabin div {
@@ -323,6 +326,7 @@ svg circle:nth-child(2) {
 #cabinButton{
 	color: red;
 }
+
 .containerCabin {
 	width: 90px;
 	height: 90px;
@@ -383,15 +387,16 @@ svg circle:nth-child(2) {
   }	
 /*-----------------------------------Small------------------------------All Systems---------------------------------------------------------------------------*/
 #infoAllSystems {
-	height: 170px;
+	height: 168px;
 	width: 250px;
 	margin-top: 50px;
-	margin-left: 30px;
+	margin-left: 40px;
 	display: none;
+	margin-bottom: 20px;
 }
 
 .lineSmall {
-	width: 165px;
+	width: 160px;
 	border: 1px solid white;
 	display: block;
 	margin-bottom: -2px;
@@ -400,7 +405,7 @@ svg circle:nth-child(2) {
 
 #allSystemsText {
 	margin-left: 35px;
-	margin-top: 20px;
+	padding-top: 10px;
 }
 
 #allSystemsText p {
@@ -422,17 +427,21 @@ svg circle:nth-child(2) {
 #allSystemsText span {
 	font-weight: 900;
 }
+ 
+
+
+
 /*----------------------------------------Small------------------------------Power-----------------------------------------------------------------------------*/
 #infoPower {
 	height: 230px;
-	width: 280px;
+	width: 270px;
 	margin-top: 20px;
-	margin-left: 0px;
 	display: none;
+	margin-left: 25px;
 }
 
 .lineSmallPower {
-	width: 195px;
+	width: 188px;
 	border: 1px solid white;
 	display: block;
 	margin-bottom: -2px;
@@ -441,7 +450,7 @@ svg circle:nth-child(2) {
 
 #powerText {
 	margin-left: 35px;
-	margin-top: 20px;
+	padding-top: 10px;
 }
 
 #powerText p {
@@ -477,8 +486,9 @@ svg circle:nth-child(2) {
 	height: 200px;
 	width: 280px;
 	margin-top: 35px;
-	margin-left: 0px;
 	display: none;
+	margin-left: 20px;
+	margin-bottom: 10px;
 }
 
 #infoFuelData {
@@ -628,6 +638,10 @@ svg circle:nth-child(2) {
 	ul {
 		margin-left: 5%;
 	}
+
+	#infoAllSystems, #infoPower, #infoFuel  {
+		margin-left: 55px;
+    }
 }
 
 @media only screen and (min-width: 425px) {
@@ -638,6 +652,14 @@ svg circle:nth-child(2) {
 	ul {
 		margin-left: 12%;
 	}
+
+	#infoAllSystems, #infoPower{
+		margin-left: 90px;
+    }
+
+    #infoFuel {
+		margin-left: 80px;
+    }
 }
 
 /*Tablet*/
@@ -676,6 +698,35 @@ svg circle:nth-child(2) {
  	margin-left: 68px;
  	padding-left: 0px;
  }
+
+ #infoCabin {
+	margin-top: 10px;
+}
+
+#infoAllSystems {
+	margin-left: 30px;
+	margin-top: 25px;
+}
+
+#allSystemsText {
+	margin-top: 0px;
+}
+
+#infoPower {
+	width: 280px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#powerText {
+	padding-top: 0px;
+	margin-top: 20px;
+}
+
+#infoFuel {
+	margin-left: 0px;
+	margin-top: 12px;
+}
 
 }
 
@@ -769,6 +820,33 @@ svg circle:nth-child(2) {
 	width: 310px;
  }
 
+  #infoCabin {
+	margin-top: 35px;
+}
+
+#infoAllSystems {
+	margin-top: 50px;
+	margin-left: 5px;
+	width: 200px;
+}
+
+#allSystemsText {
+	margin-left: 20px;
+}
+
+.lineSmall {
+	width: 140px;
+}
+
+#infoPower {
+	margin-left: 0px;
+	margin-top: 20px;
+}
+
+#infoFuel {
+	margin-top: 35px;
+}
+
 }
 
 /*Desktop*/
@@ -801,5 +879,32 @@ svg circle:nth-child(2) {
  .line {
 	width: 390px;
  }
+
+ #infoCabin {
+	margin-top: 35px;
+}
+
+#infoPower {
+	margin-left: 0px;
+	margin-top: 20px;
+}
+
+#infoFuel {
+	margin-top: 35px;
+}
+
+#infoAllSystems {
+	margin-left: 35px;
+	width: 240px;
+	margin-top: 50px;
+}
+
+#allSystemsText {
+	margin-left: 30px;
+}
+
+.lineSmall {
+	width: 155px;
+}
 
 }
