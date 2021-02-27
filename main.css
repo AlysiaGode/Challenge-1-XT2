@@ -753,7 +753,7 @@ svg circle:nth-child(2) {
 @media only screen and (min-width: 1440px) {
   model-viewer {
    	width: 500px;
-   	height: 630px;
+   	height: 600px;
   }
 
   body {
