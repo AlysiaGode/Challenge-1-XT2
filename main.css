@@ -753,7 +753,7 @@ svg circle:nth-child(2) {
 @media only screen and (min-width: 1440px) {
   model-viewer {
    	width: 500px;
-   	height: 750px;
+   	height: 700px;
   }
 
   body {
@@ -821,11 +821,11 @@ svg circle:nth-child(2) {
  }
 
   #infoCabin {
-	margin-top: 35px;
+	margin-top: 15px;
 }
 
 #infoAllSystems {
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-left: 5px;
 	width: 200px;
 }
@@ -840,11 +840,15 @@ svg circle:nth-child(2) {
 
 #infoPower {
 	margin-left: 0px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 #infoFuel {
-	margin-top: 35px;
+	margin-top: 15px;
+}
+
+ul {
+	margin-top: 0px;
 }
 
 }
@@ -905,6 +909,10 @@ svg circle:nth-child(2) {
 
 .lineSmall {
 	width: 155px;
+}
+
+ul {
+	margin-top: 30px;
 }
 
 }
